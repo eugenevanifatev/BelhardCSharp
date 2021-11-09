@@ -7,8 +7,9 @@ namespace Unit1
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            Case3();
-            Case4();
+            //Case3();
+            //Case4();
+            Case5();
             Console.ReadLine();
         }
 
@@ -72,6 +73,42 @@ namespace Unit1
             Console.WriteLine("Checking:");
             Console.WriteLine(i1 + " " + d1 + " " + dc1 + " " + c1 + " " + b1);
             Console.WriteLine(i2 + " " + d2 + " " + dc2 + " " + c2 + " " + b2);
+        }
+
+        //Задание 1.5: 
+        //Провести вычисления и вывести результаты в консоль
+        //1. Сколько мне будет лет в 2025?
+        //2. Сколько мне было бы лет, если бы я родился в 1917?
+        //3. Сколько мне было бы лет, если бы в одном году было 100 дней?
+        //4. Я купил 100$ по курсу 2,57р.Сколько я выиграю в рублях, если сдам их сегодня по курсу 2,78р?
+        static void Case5()
+        {
+            Console.WriteLine("Case 1.5");
+
+            Console.WriteLine("1:");
+            int yearBirth = 1995;
+            int yearFuture = 2025;
+            int ageFuture = yearFuture - yearBirth;
+            Console.WriteLine("My age in 2025 will be: " + ageFuture);
+
+            Console.WriteLine("2:");
+            int yearCurrent = 2021;
+            int yearPossibleBirth = 1917;
+            int agePossible = yearCurrent - yearPossibleBirth;
+            Console.WriteLine("If I was born in 1917 I would be: " + agePossible);
+
+            Console.WriteLine("3:");
+            DateTime birthday = new DateTime(1995, 10, 21);
+            int numberOfDay = (DateTime.Today.Date - birthday.Date).Days;
+            int numberOfYear = numberOfDay / 100;
+            Console.WriteLine("If there were 100 days in a year, I would be " + numberOfYear + " years old");
+
+            Console.WriteLine("4:");
+            decimal rate1 = 2.57m;
+            decimal rate2 = 2.78m;
+            decimal volumeUSD = 100;
+            decimal volumeBYN = volumeUSD * (rate2 - rate1);
+            Console.WriteLine("Profit is " + volumeBYN + " BYN");
         }
     }
 }
