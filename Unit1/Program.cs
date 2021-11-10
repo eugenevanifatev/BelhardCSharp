@@ -7,9 +7,10 @@ namespace Unit1
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            //Case3();
-            //Case4();
+            Case3();
+            Case4();
             Case5();
+            Case6();
             Console.ReadLine();
         }
 
@@ -109,6 +110,65 @@ namespace Unit1
             decimal volumeUSD = 100;
             decimal volumeBYN = volumeUSD * (rate2 - rate1);
             Console.WriteLine("Profit is " + volumeBYN + " BYN");
+        }
+
+        //Задание 1.6: 
+        //Провести вычисления и вывести результаты в консоль
+        //1. Если Маша родилась 3 марта 1997 года, то на сколько она старше или младше меня? 
+        //   (ответы что она младше потому что я это знаю, не принимаются, это нужно обосновать сравнением)
+        //2. Написать калькулятор(исп. if-else)
+        static void Case6()
+        {
+            Console.WriteLine("Case 1.6");
+
+            Console.WriteLine("1:");
+            DateTime birthdayMasha = new DateTime(1997, 3, 3);
+            DateTime birthdayMe = new DateTime(1995, 10, 21);
+            TimeSpan diff = birthdayMasha.Subtract(birthdayMe);
+            if (diff.TotalDays > 0)
+            {
+                Console.WriteLine("I am older than Masha by " + diff.TotalDays + " days");
+            }
+            else if (diff.TotalDays < 0)
+            {
+                Console.WriteLine("Masha is older than me by " + Math.Abs(diff.TotalDays) + " days");
+            }
+            else
+            {
+                Console.WriteLine("We are the same age.");
+            }
+
+            Console.WriteLine("2:");
+            Console.Write("Enter x: ");
+            double x = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter y: ");
+            double y = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter sign: ");
+            char sign = Convert.ToChar(Console.ReadLine());
+            if (sign == '+')
+            {
+                Console.WriteLine(x + " + " + y + " = " + (x + y));
+            }
+            else if (sign == '-')
+            {
+                Console.WriteLine(x + " - " + y + " = " + (x - y));
+            }
+            else if (sign == '*')
+            {
+                Console.WriteLine(x + " * " + y + " = " + (x * y));
+            }
+            else if (sign == '/')
+            {
+                Console.WriteLine(x + " / " + y + " = " + (x / y));
+            }
+            else if (sign == '%')
+            {
+                Console.WriteLine(x + " % " + y + " = " + (x % y));
+            }
+            else
+            {
+                Console.WriteLine("Incorrect sign.");
+            }
         }
     }
 }
