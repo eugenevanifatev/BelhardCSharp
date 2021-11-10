@@ -8,6 +8,7 @@ namespace Unit2
         {
             Case1();
             Case2();
+            Case3();
         }
 
         //Задание 2.1: 
@@ -117,6 +118,46 @@ namespace Unit2
                     Console.Write(i + " ");
                 }
             }
+
+            Console.ReadKey();
+            Console.Clear();
+        }
+
+        //Задание 2.3: 
+        //1. С клавиатуры вводят числа, прекратить ввод как только введут отрицательное число
+        //   и вывести на экран “Ввод окончен” (исп. for и break)
+        //2. Пункт 1 (исп. while, do-while)
+        static void Case3()
+        {
+            double n = 0;
+
+            Console.WriteLine("1:");
+            for (int i = 0; i < 2; i++)
+            {
+                n = Convert.ToDouble(Console.ReadLine());
+                if (n < 0)
+                {
+                    Console.WriteLine("The End");
+                    break;
+                }
+                i--;
+            }
+
+            Console.WriteLine("2.1:");
+            n = 0;
+            while (n >= 0)
+            {
+                n = Convert.ToDouble(Console.ReadLine());
+            }
+            Console.WriteLine("The End");
+
+            Console.WriteLine("2.2:");
+            do
+            {
+                n = Convert.ToDouble(Console.ReadLine());
+            } 
+            while (n >= 0);
+            Console.WriteLine("The End");
 
             Console.ReadKey();
             Console.Clear();
