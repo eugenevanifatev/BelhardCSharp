@@ -11,7 +11,6 @@ namespace Unit1
             Case4();
             Case5();
             Case6();
-            Console.ReadLine();
         }
 
         //Задание 1.3: 
@@ -40,6 +39,9 @@ namespace Unit1
             bool b = Convert.ToBoolean(Console.ReadLine());
 
             Console.WriteLine("i = " + i + ", d = " + d + ", dc = " + dc + ", c = " + c + ", s = " + s + ", b = " + b);
+
+            Console.ReadKey();
+            Console.Clear();
         }
 
         //Задание 1.4: 
@@ -74,6 +76,9 @@ namespace Unit1
             Console.WriteLine("Checking:");
             Console.WriteLine(i1 + " " + d1 + " " + dc1 + " " + c1 + " " + b1);
             Console.WriteLine(i2 + " " + d2 + " " + dc2 + " " + c2 + " " + b2);
+
+            Console.ReadKey();
+            Console.Clear();
         }
 
         //Задание 1.5: 
@@ -110,6 +115,9 @@ namespace Unit1
             decimal volumeUSD = 100;
             decimal volumeBYN = volumeUSD * (rate2 - rate1);
             Console.WriteLine("Profit is " + volumeBYN + " BYN");
+
+            Console.ReadKey();
+            Console.Clear();
         }
 
         //Задание 1.6: 
@@ -169,6 +177,9 @@ namespace Unit1
             {
                 Console.WriteLine("Incorrect sign.");
             }
+
+            Console.ReadKey();
+            Console.Clear();
         }
     }
 }
