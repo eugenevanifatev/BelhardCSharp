@@ -7,6 +7,7 @@ namespace Unit2
         static void Main(string[] args)
         {
             Case1();
+            Case2();
         }
 
         //Задание 2.1: 
@@ -88,6 +89,33 @@ namespace Unit2
                 default:
                     Console.WriteLine("Incorrect the month number.");
                     break;
+            }
+
+            Console.ReadKey();
+            Console.Clear();
+        }
+
+        //Задание 2.2: 
+        //1. Каждый год участок с яблонями увеличивается на 10%. Просчитать итоговую площадь участка за 8 лет, 
+        //   если в первый год было 200м.кв. (исп. for)
+        //2. Вывести на экран все числа от 0 до 100, которые делятся на 8 без остатка(исп. for)
+        static void Case2()
+        {
+            Console.WriteLine("1:");
+            decimal square = 200;
+            for (int i = 0; i < 8; i++)
+            {
+                square = square * 1.1m;
+            }
+            Console.WriteLine("Total area is " + square);
+
+            Console.WriteLine("2:");
+            for (int i = 1; i < 101; i++)
+            {
+                if (i%8 == 0)
+                {
+                    Console.Write(i + " ");
+                }
             }
 
             Console.ReadKey();
