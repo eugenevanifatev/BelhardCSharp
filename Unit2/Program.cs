@@ -6,10 +6,10 @@ namespace Unit2
     {
         static void Main(string[] args)
         {
-            Case1();
-            Case2();
-            Case3();
-            Case4();
+            //Case1();
+            //Case2();
+            //Case3();
+            //Case4();
             Case5();
         }
 
@@ -232,7 +232,11 @@ namespace Unit2
                     numbers[i, j] = Convert.ToInt32(Console.ReadLine());
                     sum = sum + numbers[i, j];
                 }
-                if (sum > totalSum)
+                if (i == 0)
+                {
+                    totalSum = sum;
+                }
+                else if (sum > totalSum)
                 {
                     totalSum = sum;
                     numberOfString = i;
