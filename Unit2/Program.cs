@@ -9,6 +9,8 @@ namespace Unit2
             Case1();
             Case2();
             Case3();
+            Case4();
+            Case5();
         }
 
         //Задание 2.1: 
@@ -162,5 +164,87 @@ namespace Unit2
             Console.ReadKey();
             Console.Clear();
         }
+
+        //Задание 2.4: 
+        //1. С клавиатуры вводят 10 чисел(оценки за контрольную), проверить сколько детей получили ниже 4 (исп. foreach)
+        //2. С клавиатуры вводят 12 чисел, найти среднее арифметическое и среднее геометрическое значения(исп. foreach)
+        static void Case4()
+        {
+            Console.WriteLine("1:");
+            int[] marks = new int[10];
+            Console.WriteLine("Enter marks of students:");
+            for (int i = 0; i < 10; i++)
+            {
+                int x = i + 1;
+                Console.Write($"{x} student: ");
+                marks[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            int n = 0;
+            foreach (int i in marks)
+            {
+                if (i < 4)
+                    n++;
+            }
+            Console.WriteLine($"{n} students have mark less than 4 point.");
+
+            Console.WriteLine("2:");
+            double[] numbers = new double[12];
+            Console.WriteLine("Enter numbers:");
+            for (int i = 0; i < 12; i++)
+            {
+                int x = i + 1;
+                Console.Write($"{x} number: ");
+                numbers[i] = Convert.ToDouble(Console.ReadLine());
+            }
+            double count = 0;
+            double sum = 0;
+            double mul = 1;
+            foreach (double i in numbers)
+            {
+                count++;
+                sum = sum + i;
+                mul = mul * i;
+            }
+            double arithProgr = sum / count;
+            double geomProgr = Math.Pow(mul, 1/count);
+            Console.WriteLine($"arithmetic progression = {arithProgr} \ngeometric progression = {geomProgr}");
+
+            Console.ReadKey();
+            Console.Clear();
+        }
+
+        //Задание 2.5: 
+        //С клавиатуры вводят 10 чисел(двум-й массив 2х5), вывести на экран номер строки, в которой сумма значений будет наибольшей
+        static void Case5()
+        {
+            int[,] numbers = new int[2, 5];
+
+            int sum = 0;
+            int totalSum = 0;
+            int numberOfString = 0;
+
+            for (int i =0; i < 2; i++)
+            {
+                int x = i + 1;
+                Console.WriteLine($"{x} string: ");
+                for (int j = 0; j < 5; j++)
+                {
+                    numbers[i, j] = Convert.ToInt32(Console.ReadLine());
+                    sum = sum + numbers[i, j];
+                }
+                if (sum > totalSum)
+                {
+                    totalSum = sum;
+                    numberOfString = i;
+                }
+                sum = 0;
+            }
+
+            Console.WriteLine($"Sum is more in {++numberOfString} string.");
+
+            Console.ReadKey();
+            Console.Clear();
+        }
+
     }
 }
