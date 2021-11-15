@@ -6,10 +6,10 @@ namespace Unit2
     {
         static void Main(string[] args)
         {
-            //Case1();
-            //Case2();
-            //Case3();
-            //Case4();
+            Case1();
+            Case2();
+            Case3();
+            Case4();
             Case5();
         }
 
@@ -173,7 +173,7 @@ namespace Unit2
             Console.WriteLine("1:");
             int[] marks = new int[10];
             Console.WriteLine("Enter marks of students:");
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < marks.Length; i++)
             {
                 int x = i + 1;
                 Console.Write($"{x} student: ");
@@ -190,7 +190,7 @@ namespace Unit2
             Console.WriteLine("2:");
             double[] numbers = new double[12];
             Console.WriteLine("Enter numbers:");
-            for (int i = 0; i < 12; i++)
+            for (int i = 0; i < numbers.Length; i++)
             {
                 int x = i + 1;
                 Console.Write($"{x} number: ");
@@ -207,7 +207,7 @@ namespace Unit2
             }
             double arithProgr = sum / count;
             double geomProgr = Math.Pow(mul, 1/count);
-            Console.WriteLine($"arithmetic progression = {arithProgr} \ngeometric progression = {geomProgr}");
+            Console.WriteLine($"arithmetic progression = {arithProgr} \ngeometric progression = {geomProgr}   {numbers.Length}");
 
             Console.ReadKey();
             Console.Clear();
