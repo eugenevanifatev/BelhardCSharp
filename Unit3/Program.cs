@@ -6,7 +6,11 @@ namespace Unit3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Case1_1 case1_1 = new Case1_1();
+            case1_1.MainMethod();
+
+            Case1_2 case1_2 = new Case1_2();
+            case1_2.Calculator();
         }
     }
 }
