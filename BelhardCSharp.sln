@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30523.141
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unit1", "Unit1\Unit1.csproj", "{A0B08BA9-E998-4023-A702-B5D2C7D241C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unit1", "Unit1\Unit1.csproj", "{A0B08BA9-E998-4023-A702-B5D2C7D241C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unit2", "Unit2\Unit2.csproj", "{4DAE24D8-4D41-4E95-9617-C6441A3D614C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unit2", "Unit2\Unit2.csproj", "{4DAE24D8-4D41-4E95-9617-C6441A3D614C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unit3", "Unit3\Unit3.csproj", "{A2AA6ACA-6757-4532-9140-3A4DB50A9277}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unit3", "Unit3\Unit3.csproj", "{A2AA6ACA-6757-4532-9140-3A4DB50A9277}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unit4", "Unit4\Unit4.csproj", "{29EC8803-4A04-40E7-93DB-DD8D5512A0FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{A2AA6ACA-6757-4532-9140-3A4DB50A9277}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2AA6ACA-6757-4532-9140-3A4DB50A9277}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2AA6ACA-6757-4532-9140-3A4DB50A9277}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29EC8803-4A04-40E7-93DB-DD8D5512A0FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29EC8803-4A04-40E7-93DB-DD8D5512A0FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29EC8803-4A04-40E7-93DB-DD8D5512A0FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29EC8803-4A04-40E7-93DB-DD8D5512A0FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
