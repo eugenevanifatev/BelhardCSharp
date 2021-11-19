@@ -7,7 +7,7 @@ namespace Unit3
     //Переделать задание с калькулятором на использование функций (вынести действия калькулятора в отдельные функции)
     class Case1_2
     {
-        public void Calculator()
+        public void GetCalculator()
         {
             double number1 = GetNumber();
             double number2 = GetNumber();
