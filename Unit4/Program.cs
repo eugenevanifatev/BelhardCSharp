@@ -6,16 +6,18 @@ namespace Unit4
     {
         static void Main(string[] args)
         {
-            Case2 case2 = new Case2();
-            case2.GetCalculator();
+            //Case2 case2 = new Case2();
+            //case2.GetCalculator();
 
-            Case4 case4_1 = new Case4(); 
+            Case4Case5 case4_1 = new Case4Case5(true, 5);
             case4_1.GetInfo();
-            Console.WriteLine(case4_1.DoMultiplication(5, true));
+            Console.WriteLine(case4_1.DoMultiplication());
 
-            Case4 case4_2 = new Case4();
+            Case4Case5 case4_2 = new Case4Case5();
+            case4_2.number = 5;
+            case4_2.action = false;
             case4_2.GetInfo();
-            Console.WriteLine(case4_2.DoMultiplication(5, false));
+            Console.WriteLine(case4_2.DoMultiplication());
         }
     }
 }
