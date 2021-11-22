@@ -6,8 +6,8 @@ namespace Unit4
     {
         static void Main(string[] args)
         {
-            //Case2 case2 = new Case2();
-            //case2.GetCalculator();
+            Case2 case2 = new Case2();
+            case2.GetCalculator();
 
             Case4Case5 case4_1 = new Case4Case5(true, 5);
             case4_1.GetInfo();
