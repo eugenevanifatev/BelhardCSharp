@@ -18,6 +18,10 @@ namespace Unit4
             case4_2.action = false;
             case4_2.GetInfo();
             Console.WriteLine(case4_2.DoMultiplication());
+
+            Case6 case6 = new Case6(false, 15);
+            case6.GetInfo();
+            Console.WriteLine(case6.DoMultiplication());
         }
     }
 }
