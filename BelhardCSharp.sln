@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30523.141
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unit1", "Unit1\Unit1.csproj", "{A0B08BA9-E998-4023-A702-B5D2C7D241C8}"
 EndProject
@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unit3", "Unit3\Unit3.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unit4", "Unit4\Unit4.csproj", "{29EC8803-4A04-40E7-93DB-DD8D5512A0FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zoo", "Zoo\Zoo.csproj", "{5A2132A7-91CA-4BDB-B66C-485ED9A98717}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zoo", "Zoo\Zoo.csproj", "{5A2132A7-91CA-4BDB-B66C-485ED9A98717}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unit7", "Unit7\Unit7.csproj", "{6CC3BC8F-9D24-4A9E-933F-212D367459D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{5A2132A7-91CA-4BDB-B66C-485ED9A98717}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A2132A7-91CA-4BDB-B66C-485ED9A98717}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A2132A7-91CA-4BDB-B66C-485ED9A98717}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CC3BC8F-9D24-4A9E-933F-212D367459D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CC3BC8F-9D24-4A9E-933F-212D367459D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CC3BC8F-9D24-4A9E-933F-212D367459D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CC3BC8F-9D24-4A9E-933F-212D367459D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
