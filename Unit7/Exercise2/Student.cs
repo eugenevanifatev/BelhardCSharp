@@ -11,7 +11,8 @@ namespace Unit7.Exercise2
         Economics,
         Math,
         Physics,
-        Programming
+        Programming,
+        History
     }
 
     internal class Student

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Unit7.Exercise2
 {
@@ -18,6 +19,9 @@ namespace Unit7.Exercise2
             var result = listOfStudents.students.Where(s => s.Name == name);
 
             listOfStudents.GetStudentInfo(result);
+
+            Console.ReadKey();
+            Console.Clear();
         }
 
         //2.Самых старших студентов
@@ -28,6 +32,9 @@ namespace Unit7.Exercise2
             var result = listOfStudents.students.Where(s => s.Age == listOfStudents.students.Max(m => m.Age));
 
             listOfStudents.GetStudentInfo(result);
+
+            Console.ReadKey();
+            Console.Clear();
         }
 
         //3.Имеющих более двух любимых предметов
@@ -38,6 +45,9 @@ namespace Unit7.Exercise2
             var result = listOfStudents.students.Where(s => s.listOfFavoriteSubjects.Count > 2);
 
             listOfStudents.GetStudentInfo(result);
+
+            Console.ReadKey();
+            Console.Clear();
         }
 
         //4.Всех девушек, любящих программирование
@@ -48,19 +58,31 @@ namespace Unit7.Exercise2
             var result = listOfStudents.students.Where(s => s.Gender == "female" && s.listOfFavoriteSubjects.Contains(Subjects.Programming));
 
             listOfStudents.GetStudentInfo(result);
+
+            Console.ReadKey();
+            Console.Clear();
         }
 
         //5.Студентов, которые единственные любят какой-то предмет (напр. только Сережа любит Историю)
         //не решил
         public void SearchStudentWithUniqueSubject()
         {
-            Console.WriteLine("Students who are the only ones who love the subject:");
+            var allFavSubjs = new List<Subjects>();
 
-            var result = listOfStudents.students.GroupBy(s => s.listOfFavoriteSubjects);
+            foreach (var stud in listOfStudents.students)
+            {
+                allFavSubjs.AddRange(stud.listOfFavoriteSubjects);
+            }
+            var groups = allFavSubjs.GroupBy(m => m).Where(e => e.Count() == 1);
 
-            foreach (var item in result)
-                Console.WriteLine(item.Key);
+            foreach (var group in groups)
+            {
+                Console.WriteLine("Students who are the only ones who love the subject: " + group.Key);
+                Console.WriteLine("This student: " + listOfStudents.students.Single(m => m.listOfFavoriteSubjects.Contains(group.Key)).Name + "\n-----------------------");
+            }
 
+            Console.ReadKey();
+            Console.Clear();
         }
 
         //6.Выборку из имен и возрастов студентов, которые учатся в группе №...
@@ -72,8 +94,38 @@ namespace Unit7.Exercise2
 
             foreach (var item in result)
                 Console.WriteLine($"{item}");
+
+            Console.ReadKey();
+            Console.Clear();
         }
 
         //7.Студентов , у которых есть пересечение по любимым предметам
+
+        public void SearchStudentWithNonUniqueSubject()
+        {
+            var allFavSubjs = new List<Subjects>();
+
+            foreach (var stud in listOfStudents.students)
+            {
+                allFavSubjs.AddRange(stud.listOfFavoriteSubjects);
+            }
+            var groups = allFavSubjs.GroupBy(m => m).Where(e => e.Count() > 1);
+
+            foreach (var group in groups)
+            {
+                Console.WriteLine("Students who love the subject: " + group.Key);
+                var studs = listOfStudents.students.
+                            Where(m => m.listOfFavoriteSubjects.
+                            Contains(group.Key));
+                Parallel.ForEach(studs, m =>
+                {
+                    Console.WriteLine(m.Name + " ");
+                });
+                Console.WriteLine("---------------------");
+            }
+
+            Console.ReadKey();
+            Console.Clear();
+        }
     }
 }

@@ -18,7 +18,8 @@ namespace Unit7.Exercise2
             new Student{ Name = "Petr", Age = 23, GroupNumber = 1, Gender = "male", listOfFavoriteSubjects = {Subjects.Programming, Subjects.Physics} },
             new Student{ Name = "Rick", Age = 23, GroupNumber = 3, Gender = "male", listOfFavoriteSubjects = {Subjects.Chemistry, Subjects.Biology} },
             new Student{ Name = "Ava", Age = 21, GroupNumber = 4, Gender = "female", listOfFavoriteSubjects = {Subjects.Economics, Subjects.Math} },
-            new Student{ Name = "Emma", Age = 20, GroupNumber = 2, Gender = "female", listOfFavoriteSubjects = {Subjects.Biology, Subjects.Physics, Subjects.Chemistry, Subjects.Math} }
+            new Student{ Name = "Emma", Age = 20, GroupNumber = 2, Gender = "female", listOfFavoriteSubjects = {Subjects.Biology, Subjects.Physics, Subjects.Chemistry, Subjects.Math} },
+            new Student{ Name = "Stive", Age = 20, GroupNumber = 2, Gender = "male", listOfFavoriteSubjects = {Subjects.History} }
         };
 
         public void GetStudentInfo(IEnumerable<Student>result)
